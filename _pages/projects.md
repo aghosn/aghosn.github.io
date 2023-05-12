@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: 
+description: Non exhaustive list of projects, slowly adding them 
 nav: true
 nav_order: 2
-display_categories: [published, work, fun]
+display_categories: [published, work, old]
 horizontal: false
 ---
 
