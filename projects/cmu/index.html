@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Enclosure | Adrien  Ghosn</title>
+    <title>Operating System Design | Adrien  Ghosn</title>
     <meta name="author" content="Adrien  Ghosn">
-    <meta name="description" content="language-based restriction of untrusted libraries">
+    <meta name="description" content="class project at Carnegie Mellon University">
     <meta name="keywords" content="aghosn, research, computer-science, virtualization, security, academic-website,">
 
 
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://aghosn.github.io/projects/2_project/">
+    <link rel="canonical" href="https://aghosn.github.io/projects/cmu/">
 
     <!-- Dark Mode -->
     
@@ -119,36 +119,25 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Enclosure</h1>
-            <p class="post-description">language-based restriction of untrusted libraries</p>
+            <h1 class="post-title">Operating System Design</h1>
+            <p class="post-description">class project at Carnegie Mellon University</p>
           </header>
 
           <article>
-            <h2 id="abstract">Abstract</h2>
+            <h2 id="year">Year</h2>
 
-<p>Programming languages and systems have failed to address the security implications of the increasingly frequent use of public libraries to construct modern software.
-Most languages provide tools and online repositories to publish, import, and use libraries; however, this double-edged sword can incorporate a large quantity of unknown, unchecked, and unverified code into an application.
-The risk is real, as demonstrated by malevolent actors who have repeatedly inserted malware into popular open-source libraries.</p>
+<p>2013 (Bachelor)</p>
 
-<p>This paper proposes a solution: enclosures, a new programming language construct for library isolation that provides a developer with fine-grain control over the resources that a library can access, even for libraries with complex inter-library dependencies.
-The programming abstraction is language-independent and could be added to most languages.
-These languages would then be able to take advantage of hardware isolation mechanisms that are effective across language boundaries.</p>
+<h2 id="description">Description</h2>
 
-<p>The enclosure policies are enforced at run time by LitterBox, a language-independent framework that uses hardware mechanisms to provide uniform and robust isolation guarantees, even for libraries written in unsafe languages.
-LitterBox currently supports both Intel VT-x (with general-purpose extended page tables) and the emerging Intel Memory Protection Keys (MPK).</p>
+<p>I did my third year of undergrad’ at CMU and was crazy enough to take the OS class and do the project alone.</p>
 
-<p>We describe an enclosure implementation for the Go and Pythonlanguages.
-Our evaluation demonstrates that the Go implementation can protect sensitive data in real-world applications constructed using complex untrusted libraries with deep dependencies.
-It requires minimal code refactoring and incurs acceptable performance overhead.
-The Python implementation demonstrates LitterBox’s ability to support dynamic languages.</p>
+<p>This class explains my love-hate relationship with systems, as well as why I took a break to work on higher-level programming languages and compilers for while.</p>
 
-<h2 id="publication">Publication</h2>
+<p>The class project was to implement an x86 UNIX-like operating system, including drivers, virtual memory, processes/threads.</p>
 
-<p><a href="https://dl.acm.org/doi/10.1145/3445814.3446728" rel="external nofollow noopener" target="_blank">ASPLOS 21</a></p>
+<p>We were not allowed to publish the code, but <a href="https://www.cs.cmu.edu/~410/" rel="external nofollow noopener" target="_blank">here</a> is the website for the class.</p>
 
-<h2 id="artefact">Artefact</h2>
-
-<p><a href="https://github.com/aghosn/enclosures" rel="external nofollow noopener" target="_blank">Code Snapshot</a></p>
 
           </article>
 

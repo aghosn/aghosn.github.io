@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>OSR for R | Adrien  Ghosn</title>
+    <title>Secured Routines | Adrien  Ghosn</title>
     <meta name="author" content="Adrien  Ghosn">
-    <meta name="description" content="Master Thesis, Northeastern University">
+    <meta name="description" content="Language-based Construction of TEEs">
     <meta name="keywords" content="aghosn, research, computer-science, virtualization, security, academic-website,">
 
 
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://aghosn.github.io/projects/9_project/">
+    <link rel="canonical" href="https://aghosn.github.io/projects/gotee/">
 
     <!-- Dark Mode -->
     
@@ -119,39 +119,30 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">OSR for R</h1>
-            <p class="post-description">Master Thesis, Northeastern University</p>
+            <h1 class="post-title">Secured Routines</h1>
+            <p class="post-description">Language-based Construction of TEEs</p>
           </header>
 
           <article>
-            <h1 id="description">Description</h1>
+            <h2 id="year">Year</h2>
 
-<p>I was lucky enough to do my Master Thesis at Northeastern, with Prof. Jan Vitek as part of my degree at EPFL.
-I worked on On-stack-replacement (OSR) for a JIT compiler for R, trying to make that damn language run faster. 
-This allowed me to learn a lot about LLVM and language/compiler design.</p>
-
-<p>Disclaimer: The text below was my first big write-up.</p>
+<p>2019 (PhD)</p>
 
 <h2 id="abstract">Abstract</h2>
 
-<p>Efficient Runtime Deoptimization for R</p>
+<p>Trusted Execution Environments (TEEs), such as Intel SGX’s enclave, use hardware to ensure the confidentiality and integrity of operations on sensitive data. While the technology is widely available, the complexity of its programming model and its performance overhead have limited adoption. TEEs provide a new and valuable hardware functionality that has no obvious analogue in programming languages, which means that developers must manually partition their application into trusted and untrusted components.</p>
 
-<p>R is a dynamic programming language that combines functional and object-oriented features.
-R has become a popular language for statistical computing, with more than 2 million users worldwide.</p>
+<p>This paper describes an approach that fully integrates trusted execution in a language-appropriate manner. We extend the Go language to allow a programmer to execute a goroutine within an enclave, to use low-overhead channels to communicate between the trusted and untrusted environments, and to rely on a compiler to automatically extract the secure code and data. Our prototype compiler and runtime, GOTEE , is a backward-compatible fork of the Go compiler.</p>
 
-<p>However, R suffers from poor performances.
-As a dynamic and reflective language, any R construct can be modified or redefined at runtime.
-It is thus hardly amenable to many common compiler optimizations.
-To make matters worse, R performance bottlenecks seem to be inherent to its semantics.</p>
-
-<p>This thesis presents RJIT OSR, an on-stack replacement prototype for runtime deoptimization in R.
-On-stack replacement refers to a compiler technique that dynamically transfers execution between different programs, while propagating the execution state.
-RJIT OSR relies on on-stack replacement to preserve an R program’s correctness while enabling aggressive, speculative and unsound compiler optimizations.
-RJIT OSR allows the compiler to target R performance bottlenecks, by locally breaking R semantics</p>
+<p>The evaluation shows that our compiler-driven code and data partitioning efficiently executes both microbenchmarks and applications. On the former, GOTEE achieves a 5.2x throughput, and a 2.3x latency improvement over the Intel SGX SDK. Our case studies, the Go tls package and a secured keystore inspired by the go-ethereum project, show that minor source-code modifications suffice to provide confidentiality and integrity guarantees with only moderate performance overheads.</p>
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://github.com/aghosn/report/blob/master/MasterThesis/main.pdf" rel="external nofollow noopener" target="_blank">Master Thesis</a></p>
+<p><a href="https://www.usenix.org/conference/atc19/presentation/ghosn" rel="external nofollow noopener" target="_blank">USENIX ATC’19</a></p>
+
+<h2 id="artefact">Artefact</h2>
+
+<p><a href="https://github.com/epfl-dcsl/gotee" rel="external nofollow noopener" target="_blank">Code Snapshot</a></p>
 
           </article>
 

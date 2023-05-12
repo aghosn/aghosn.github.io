@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ASTPersistence | Adrien  Ghosn</title>
+    <title>elf64 | Adrien  Ghosn</title>
     <meta name="author" content="Adrien  Ghosn">
-    <meta name="description" content="Master semester project">
+    <meta name="description" content="Parsing ELF 64">
     <meta name="keywords" content="aghosn, research, computer-science, virtualization, security, academic-website,">
 
 
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://aghosn.github.io/projects/6_project/">
+    <link rel="canonical" href="https://aghosn.github.io/projects/elf64/">
 
     <!-- Dark Mode -->
     
@@ -119,32 +119,23 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">ASTPersistence</h1>
-            <p class="post-description">Master semester project</p>
+            <h1 class="post-title">elf64</h1>
+            <p class="post-description">Parsing ELF 64</p>
           </header>
 
           <article>
             <h2 id="description">Description</h2>
 
-<p>Back during my master at EPFL, I worked on a few plugins for the Scala compiler.
-This is one of them.</p>
+<p>Writing code to parse an ELF binary seems to be something that I have to do at least once every two years.
+As part of my <code class="language-plaintext highlighter-rouge">C-Stem</code> initiative, I decided to package my C implementation into a library.</p>
 
-<p>I barely remember the details of it but apparently:</p>
+<p>The library supports symbol lookups (but does not parse relocations… yet).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The AST Persistence Project aims to store ASTs in a compressed way along with the Byte Code in order to allow their interpretation at compile time.
-The main use of such tool is for Macro expansion, in order to avoid Macros to be precompiled.
-
-The project will be done as an external compiler plugin.
-
-</code></pre></div></div>
-
-<p>Don’t judge me too harshly, this was a long time ago…</p>
+<p>I might be able to get my hands on my Go and Rust implementations and publish them here as well.</p>
 
 <h2 id="code">Code</h2>
 
-<p><a href="https://github.com/aghosn/ASTpersistence" rel="external nofollow noopener" target="_blank">Github repository</a></p>
-
-<p><a href="https://infoscience.epfl.ch/record/200050?ln=en" rel="external nofollow noopener" target="_blank">Student report</a></p>
+<p><a href="https://github.com/aghosn/c-stem/tree/main/elf64" rel="external nofollow noopener" target="_blank">Github repository</a></p>
 
           </article>
 

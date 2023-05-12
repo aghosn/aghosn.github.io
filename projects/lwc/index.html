@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Obey | Adrien  Ghosn</title>
+    <title>LWC on Dune | Adrien  Ghosn</title>
     <meta name="author" content="Adrien  Ghosn">
-    <meta name="description" content="Linter for Scala, master semester project">
+    <meta name="description" content="bringing light-weight contexts to Dune">
     <meta name="keywords" content="aghosn, research, computer-science, virtualization, security, academic-website,">
 
 
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://aghosn.github.io/projects/7_project/">
+    <link rel="canonical" href="https://aghosn.github.io/projects/lwc/">
 
     <!-- Dark Mode -->
     
@@ -119,30 +119,28 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Obey</h1>
-            <p class="post-description">Linter for Scala, master semester project</p>
+            <h1 class="post-title">LWC on Dune</h1>
+            <p class="post-description">bringing light-weight contexts to Dune</p>
           </header>
 
           <article>
-            <h2 id="description">Description</h2>
+            <h2 id="year">Year</h2>
 
-<p>This was a long time ago… Can I even still code in Scala?</p>
+<p>2016 (PhD)</p>
 
-<p>Here is the gist of it:</p>
+<h2 id="description">Description</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Obey is a linter tool for Scala.
-Obey enables to define rules, based on scala.meta trees and the TQL library, corresponding to code health requirements.
-A rule can generate warnings and/or propose to correct the source code automatically.
-</code></pre></div></div>
+<p>At the begining of my PhD, in 2016, I implemented <a href="https://www.usenix.org/conference/osdi16/technical-sessions/presentation/litton" rel="external nofollow noopener" target="_blank">Light-weight-contexts</a>, i.e., a sub-process compartmentalization, inside <a href="http://dune.scs.stanford.edu/" rel="external nofollow noopener" target="_blank">Dune</a>, a process-virtualization project.</p>
 
-<p>The code is obviously completely out-of-date and was just a prototype, but I think it came before scala’s default linter…
-Another usage for this project was to integrate it directly in CI to update library APIs without developer’s intervention, apply coding-style rules etc.</p>
+<p>The advantage of this approach was that, unlike the original LWC, it didn’t require to modify the Operating system.</p>
+
+<p>This was a few months worth of work, quite fun, and allowed me to learn how Intel VT-x works (it is also one of the numerous times where I had to write code to manipulate page-tables and vmas, eventually leading to my <code class="language-plaintext highlighter-rouge">C-Stem</code> library).</p>
 
 <h2 id="artefact">Artefact</h2>
 
-<p><a href="https://github.com/aghosn/Obey" rel="external nofollow noopener" target="_blank">Github repository</a></p>
+<p><a href="https://github.com/epfl-dcsl/gotee" rel="external nofollow noopener" target="_blank">Github repository</a></p>
 
-<p><a href="https://infoscience.epfl.ch/record/204804?ln=en" rel="external nofollow noopener" target="_blank">Student Report</a></p>
+<p><a href="https://github.com/aghosn/HotOs/blob/master/aghosn_main.pdf" rel="external nofollow noopener" target="_blank">A terribly written attempt at publishing it (I was young)</a></p>
 
           </article>
 
