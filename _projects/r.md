@@ -7,6 +7,10 @@ importance: 1
 category: old 
 ---
 
+## Year
+
+2015 (Master Thesis)
+
 # Description
 
 I was lucky enough to do my Master Thesis at Northeastern, with Prof. Jan Vitek as part of my degree at EPFL.

@@ -7,6 +7,10 @@ importance: 1
 category: published 
 ---
 
+## Year
+
+2019 (PhD)
+
 ## Abstract
 
 Trusted Execution Environments (TEEs), such as Intel SGX’s enclave, use hardware to ensure the confidentiality and integrity of operations on sensitive data. While the technology is widely available, the complexity of its programming model and its performance overhead have limited adoption. TEEs provide a new and valuable hardware functionality that has no obvious analogue in programming languages, which means that developers must manually partition their application into trusted and untrusted components.
