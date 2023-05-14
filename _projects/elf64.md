@@ -1,7 +1,7 @@
 ---
 layout: page
-title: elf64
-description: 2021 - ongoing
+title: ELF64
+description: 2021 - ongoing, C-Stem
 img: assets/img/elf64.jpg
 importance: 2
 category: Tools 
