@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   address: >
     <p> Microsoft Research</p>
-    <p>Cambridge,</p>
+    <p>Cambridge</p>
     <p>United Kingdom</p>
 
 news: false  # includes a list of news items
@@ -30,7 +30,7 @@ It supports compartmentalization and confidential computing, in deployments as l
 ---
 
 Prior to joining Microsoft, I did my PhD at EPFL (Switzerland), with Prof. Edouard Bugnion, Prof. James R. Larus, and Prof. Mathias Payer.
-My research focused on providing new and efficient programming abstractions to manage heterogeneous trust levels in applications, sandboxing untrusted libraries and running trusted code in TEEs.
+My research focused on providing new and efficient programming abstractions to manage heterogeneous trust levels in applications: sandboxing untrusted libraries and running trusted code in TEEs.
 I modified and extended the Go compiler as well as Python's runtime to support these new abstractions.
 
 ---
