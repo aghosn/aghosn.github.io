@@ -4,7 +4,7 @@ title: OS-CMU
 description: 2013 (Bachelor, Carnegie Mellon University)
 img: assets/img/cmu.png
 importance: 1
-category: Bachelor 
+category: Class Projects 
 ---
 
 ## Operating System Design & Implementation 15-410

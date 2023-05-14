@@ -4,7 +4,7 @@ title: Enclosure
 description: 2021 (PhD)
 img: assets/img/sandbox.jpg
 importance: 9
-category: Published 
+category: Research 
 ---
 
 # Enclosure: language-based restriction of untrusted libraries 

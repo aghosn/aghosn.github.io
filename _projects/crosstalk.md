@@ -4,7 +4,7 @@ title: Crosstalk
 description: 2014 (Bachelor class project, EPFL) 
 img: assets/img/crosstalk.jpg
 importance: 10
-category: Bachelor 
+category: Class Projects 
 ---
 
 ## Crosstalk

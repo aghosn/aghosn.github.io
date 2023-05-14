@@ -3,8 +3,8 @@ layout: page
 title: LWC on Dune
 description: 2016 (PhD) 
 img: assets/img/lwc.jpg
-importance: 5
-category: Tools 
+importance: 15
+category: Research 
 ---
 
 # LWC on Dune: bringing light-weight contexts to Dune 

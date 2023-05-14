@@ -4,7 +4,7 @@ title: GoTEE
 description: 2019 (PhD)
 img: assets/img/golang.jpg
 importance: 10
-category: Published 
+category: Research 
 ---
 
 # Secured Routines: Language-based Construction of TEEs 
