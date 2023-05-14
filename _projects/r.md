@@ -4,20 +4,17 @@ title: OSR for R
 description: Master Thesis, Northeastern University
 img: assets/img/r_logo.png
 importance: 1
-category: old 
+category: Masters 
 ---
 
 ## Year
 
 2015 (Master Thesis)
 
-# Description
+## Description
 
-I was lucky enough to do my Master Thesis at Northeastern, with Prof. Jan Vitek as part of my degree at EPFL.
-I worked on On-stack-replacement (OSR) for a JIT compiler for R, trying to make that damn language run faster. 
-This allowed me to learn a lot about LLVM and language/compiler design.
-
-Disclaimer: The text below was my first big write-up.
+I did my Master Thesis at Northeastern, with Prof. Jan Vitek, as part of my degree at EPFL.
+I worked on speculative optimizations and On-stack-replacement (OSR) for an R JIT compiler, using LLVM.
 
 ## Abstract
 

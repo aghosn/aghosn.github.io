@@ -4,7 +4,7 @@ title: DLL
 description: A generic double-linked list implementation for C 
 img: assets/img/DLL.png
 importance: 1
-category: work 
+category: Tools 
 ---
 
 ## Description 

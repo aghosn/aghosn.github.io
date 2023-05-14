@@ -4,7 +4,7 @@ title: LWC on Dune
 description: bringing light-weight contexts to Dune 
 img: assets/img/lwc.jpg
 importance: 1
-category: work 
+category: Tools 
 ---
 
 ## Year

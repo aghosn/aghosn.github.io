@@ -5,7 +5,7 @@ permalink: /projects/
 description: Non exhaustive list of projects, slowly adding them 
 nav: true
 nav_order: 2
-display_categories: [published, work, old]
+display_categories: [Published, Tools, Masters, Bachelor]
 horizontal: false
 ---
 

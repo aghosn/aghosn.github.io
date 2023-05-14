@@ -1,15 +1,13 @@
 ---
 layout: page
-title: Secured Routines
-description: Language-based Construction of TEEs 
+title: Secured Routines 
+description: 2019 (PhD)
 img: assets/img/golang.png
 importance: 1
-category: published 
+category: Published 
 ---
 
-## Year
-
-2019 (PhD)
+# Secured Routines: Language-based Construction of TEEs 
 
 ## Abstract
 
@@ -23,6 +21,8 @@ The evaluation shows that our compiler-driven code and data partitioning efficie
 
 <a href='https://www.usenix.org/conference/atc19/presentation/ghosn'>USENIX ATC'19</a>
 
-## Artefact
+## Artefacts
+
+<a href='https://www.youtube.com/watch?v=Gl7ml_xTk94'>Talk</a>
 
 <a href='https://github.com/epfl-dcsl/gotee'>Code Snapshot</a>

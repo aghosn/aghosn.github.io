@@ -4,7 +4,7 @@ title: elf64
 description: Parsing ELF 64
 img: assets/img/elf64.png
 importance: 1
-category: work 
+category: Tools 
 ---
 
 ## Description 

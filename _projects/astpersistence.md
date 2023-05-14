@@ -4,7 +4,7 @@ title: ASTPersistence
 description: Master semester project 
 img: assets/img/scalameta.png
 importance: 1
-category: old 
+category: Masters 
 ---
 
 ## Year

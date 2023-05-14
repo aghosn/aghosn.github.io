@@ -4,7 +4,7 @@ title: Obey
 description: Linter for Scala, master semester project 
 img: assets/img/obey.png
 importance: 1
-category: old 
+category: Masters 
 ---
 
 ## Year

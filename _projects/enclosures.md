@@ -1,15 +1,13 @@
 ---
 layout: page
 title: Enclosure
-description: language-based restriction of untrusted libraries
+description: 2021 (PhD)
 img: assets/img/sandbox.png
 importance: 1
-category: published 
+category: Published 
 ---
 
-## Year
-
-2021 (PhD)
+# Enclosure: language-based restriction of untrusted libraries 
 
 ## Abstract
 
@@ -33,6 +31,6 @@ The Python implementation demonstrates LitterBox’s ability to support dynamic 
 
 <a href='https://dl.acm.org/doi/10.1145/3445814.3446728'>ASPLOS 21</a>
 
-## Artefact
+## Artefacts
 
 <a href='https://github.com/aghosn/enclosures'>Code Snapshot</a>
