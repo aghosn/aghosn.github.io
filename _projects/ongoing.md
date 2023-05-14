@@ -1,9 +1,9 @@
 ---
 layout: page
-title: TEEs on Legacy Hardware
+title: Tyche
 description: 2021 (PhD)
 img: assets/img/tyche.png
-importance: 1
+importance: 8
 category: Published 
 ---
 
@@ -18,6 +18,6 @@ Whether it really requires new hardware, or simply a system re-design.
 My personal belief is that confidential computing should become the norm and thus be supported in a similar fashion on all platforms, all devices, and be orthogonal to existing system abstractions (process & VMs).
 The right solution should support enclaves, confidential VMs, but also any combination and nesting of both.
 
-<a href='https://youtu.be/pXv3IU9DJAM?t=1153'>This</a> is the first short talk I gave in that direction at the very early stages of our project called Tyche.
+<a href='https://youtu.be/pXv3IU9DJAM?t=1153'>This</a> is the first short talk I gave, at AMLD EPFL, in that direction at the very early stages of our project called Tyche.
 
 Since then, we have made progress toward a full implementation and published our early prototype at HotOS 23.

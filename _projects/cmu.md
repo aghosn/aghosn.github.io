@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Operating System Design
+title: OS-CMU
 description: class project at Carnegie Mellon University 
 img: assets/img/cmu.png
 importance: 1
