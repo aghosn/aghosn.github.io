@@ -4,7 +4,7 @@ title: OSR for R
 description: 2015 (Master Thesis, Northeastern University)
 img: assets/img/r_logo.jpg
 importance: 1
-category: Class Projects 
+category: Past Projects 
 ---
 
 ## Efficient Runtime Deoptimization for R 

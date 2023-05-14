@@ -6,7 +6,7 @@ github_repos:
   - epfl-dcsl/gotee
   - aghosn/enclosures
   - aghosn/goandc
-  - aghosn/go
+  - aghosn/go-enclosures
   - aghosn/obey
   - aghosn/astpersistence
   - tweetaggregator/crosstalk

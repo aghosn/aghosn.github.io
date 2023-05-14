@@ -4,7 +4,7 @@ title: Obey
 description: 2015 (Master semester project, EPFL) 
 img: assets/img/obey.jpg
 importance: 2
-category: Class Projects 
+category: Past Projects 
 ---
 
 ## Obey: Linter for scalameta

@@ -5,7 +5,7 @@ permalink: /projects/
 description: Non-exhaustive list of projects
 nav: true
 nav_order: 2
-display_categories: [Research, Tools, Class Projects]
+display_categories: [Research, Tools, Past Projects]
 horizontal: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /cv/
-title: My Resume
+title: Resume
 nav: true
 nav_order: 4
 cv_pdf: aghosn_cv.pdf

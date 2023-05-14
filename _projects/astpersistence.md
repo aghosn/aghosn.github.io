@@ -4,7 +4,7 @@ title: ASTPersistence
 description: 2014 (Master semester project, EPFL) 
 img: assets/img/scalameta.jpg
 importance: 3
-category: Class Projects 
+category: Past Projects 
 ---
 
 ## AST-Persistence for Scalameta 
