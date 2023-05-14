@@ -3,7 +3,7 @@ layout: page
 title: LWC on Dune
 description: 2016 (PhD) 
 img: assets/img/lwc.jpg
-importance: 1
+importance: 5
 category: Tools 
 ---
 
