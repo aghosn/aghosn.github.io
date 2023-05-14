@@ -9,6 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
+    <p> Microsoft Research</p>
     <p>Cambridge,</p>
     <p>United Kingdom</p>
 
@@ -32,6 +33,8 @@ Prior to joining Microsoft, I did my PhD at EPFL (Switzerland), with Prof. Edoua
 My research focused on providing new and efficient programming abstractions to manage heterogenous trust levels in applications, sandboxing untrusted libraries and running trusted code in TEEs.
 
 ---
+
+<h5>Hobbies</h5>
 
 I spend time on `hackthebox` and am slowly improving my hacking skills.
 

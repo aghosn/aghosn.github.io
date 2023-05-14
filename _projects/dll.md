@@ -18,4 +18,4 @@ I must have written it at least 10 times in my entire career, it was time to hav
 
 ## Code 
 
-<a href='https://github.com/aghosn/c-stem/tree/main/dll'>Code Snapshot</a>
+<a href='https://github.com/aghosn/c-stem/tree/main/dll'>Github Repository</a>

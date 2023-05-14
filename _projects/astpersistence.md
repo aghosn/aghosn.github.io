@@ -1,32 +1,22 @@
 ---
 layout: page
 title: ASTPersistence
-description: Master semester project 
+description: 2014 (Master semester project, EPFL) 
 img: assets/img/scalameta.png
-importance: 1
+importance: 3
 category: Masters 
 ---
 
-## Year
+## AST-Persistence for Scalameta 
 
-2014 (Masters)
-
-## Description 
+---
 
 Back during my master at EPFL, I worked on a few plugins for the Scala compiler.
-This is one of them.
 
-I barely remember the details of it but apparently:
+## Abstract
 
-```
-The AST Persistence Project aims to store ASTs in a compressed way along with the Byte Code in order to allow their interpretation at compile time.
-The main use of such tool is for Macro expansion, in order to avoid Macros to be precompiled.
+The Scala compiler uses ASTs (abstract syntax trees) as an intermediate representation before generating bytecode. With the development of Scala macros which expand trees at compile time, being able to access, modify and recompose ASTs within the same compilation scope is becoming more and more important. One of the common scenarios of using macros is inspecting abstract syntax trees within reach in order to learn more about the code being transformed, to apply more powerful optimizations, etc. However, arguments to macros can depend on third-party libraries, which are precompiled as bytecode and don't have their ASTs available. It would therefore be great to have a way to publish ASTs along with the bytecode. The publishing of those ASTs should be a choice of the programmer and should take as little space as possible in order to be transparent to the user.
 
-The project will be done as an external compiler plugin.
-
-```
-
-Don't judge me too harshly, this was a long time ago...
 
 ## Code 
 

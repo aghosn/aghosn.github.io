@@ -1,24 +1,20 @@
 ---
 layout: page
 title: OSR for R
-description: Master Thesis, Northeastern University
+description: 2015 (Master Thesis, Northeastern University)
 img: assets/img/r_logo.png
 importance: 1
 category: Masters 
 ---
 
-## Year
-
-2015 (Master Thesis)
-
-## Description
+## Efficient Runtime Deoptimization for R 
+---
 
 I did my Master Thesis at Northeastern, with Prof. Jan Vitek, as part of my degree at EPFL.
+
 I worked on speculative optimizations and On-stack-replacement (OSR) for an R JIT compiler, using LLVM.
 
 ## Abstract
-
-Efficient Runtime Deoptimization for R
 
 R is a dynamic programming language that combines functional and object-oriented features.
 R has become a popular language for statistical computing, with more than 2 million users worldwide.
@@ -35,4 +31,4 @@ RJIT OSR allows the compiler to target R performance bottlenecks, by locally bre
 
 ## Publication
 
-<a href='https://github.com/aghosn/report/blob/master/MasterThesis/main.pdf'>Master Thesis</a>
+<a href='https://github.com/aghosn/master-thesis/blob/master/MasterThesis/main.pdf'>Master Thesis</a>
