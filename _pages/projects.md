@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Non exhaustive list of projects, slowly adding them 
+description: Non-exhaustive list of projects
 nav: true
 nav_order: 2
 display_categories: [Published, Tools, Masters, Bachelor]
