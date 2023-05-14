@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Crosstalk 
-description: 2014 (Bachelor class project, EPFL) 
+description: 2014 - Bachelor class project, EPFL 
 img: assets/img/crosstalk.jpg
 importance: 10
 category: Past Projects 

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: OSR for R
-description: 2015 (Master Thesis, Northeastern University)
+title: OSR For R
+description: 2015 - Master thesis, Northeastern University
 img: assets/img/r_logo.jpg
 importance: 1
 category: Past Projects 

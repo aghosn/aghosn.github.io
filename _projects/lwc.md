@@ -1,7 +1,7 @@
 ---
 layout: page
 title: LWC on Dune
-description: 2016 (PhD) 
+description: 2016 - PhD fellowship, EPFL 
 img: assets/img/lwc.jpg
 importance: 15
 category: Research 

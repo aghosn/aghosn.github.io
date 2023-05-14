@@ -1,7 +1,7 @@
 ---
 layout: page
 title: GoTEE 
-description: 2019 (PhD)
+description: 2019 - PhD, EPFL
 img: assets/img/golang.jpg
 importance: 10
 category: Research 

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ASTPersistence
-description: 2014 (Master semester project, EPFL) 
+title: AST-Persist.
+description: 2014 - Master semester project, EPFL 
 img: assets/img/scalameta.jpg
 importance: 3
 category: Past Projects 

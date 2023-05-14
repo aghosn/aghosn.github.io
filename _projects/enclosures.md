@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Enclosure
-description: 2021 (PhD)
+description: 2021 - PhD, EPFL
 img: assets/img/sandbox.jpg
 importance: 9
 category: Research 

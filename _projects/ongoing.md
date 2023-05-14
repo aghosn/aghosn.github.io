@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tyche
-description: 2021 (PhD)
+description: 2021 - PostDoc, Microsoft Research
 img: assets/img/tyche.jpg
 importance: 8
 category: Research 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: OS-CMU
-description: 2013 (Bachelor, Carnegie Mellon University)
+description: 2013 - Bachelor, Carnegie Mellon University
 img: assets/img/cmu.png
 importance: 1
 category: Past Projects 
