@@ -5,3 +5,8 @@ github_repos:
   - aghosn/c-stem
   - epfl-dcsl/gotee
   - aghosn/enclosures
+  - aghosn/goandc
+  - aghosn/go
+  - aghosn/obey
+  - aghosn/astpersistence
+  - tweetaggregator/crosstalk
