@@ -1,23 +1,20 @@
 ---
 layout: page
 title: OS-CMU
-description: class project at Carnegie Mellon University 
-img: assets/img/cmu.png
+description: 2013 (Bachelor, Carnegie Mellon University)
+img: assets/img/cmu.jpg
 importance: 1
 category: Bachelor 
 ---
 
-## Year
+## Operating System Design & Implementation 15-410
+---
 
-2013 (Bachelor)
-
-## Description
-
-I did my third year of undergrad' at CMU and was crazy enough to take the OS class and do the project alone.
+I did my third year of undergraduate studies at CMU and took the famous OS class there.
 
 This class explains my love-hate relationship with systems, as well as why I took a break to work on higher-level programming languages and compilers for while.
 
-The class project was to implement an x86 UNIX-like operating system, including drivers, virtual memory, processes/threads.
+The class project was to implement an x86 UNIX-like operating system, including drivers, virtual memory, processes/threads, which I did alone.
 
 We were not allowed to publish the code, but <a href='https://www.cs.cmu.edu/~410/'>here</a> is the website for the class.
 

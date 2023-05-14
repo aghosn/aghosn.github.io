@@ -2,7 +2,7 @@
 layout: page
 title: Obey
 description: 2015 (Master semester project, EPFL) 
-img: assets/img/obey.png
+img: assets/img/obey.jpg
 importance: 2
 category: Masters 
 ---

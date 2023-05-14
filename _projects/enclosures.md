@@ -2,7 +2,7 @@
 layout: page
 title: Enclosure
 description: 2021 (PhD)
-img: assets/img/sandbox.png
+img: assets/img/sandbox.jpg
 importance: 9
 category: Published 
 ---

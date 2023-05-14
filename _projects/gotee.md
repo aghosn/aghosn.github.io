@@ -2,7 +2,7 @@
 layout: page
 title: GoTEE 
 description: 2019 (PhD)
-img: assets/img/golang.png
+img: assets/img/golang.jpg
 importance: 10
 category: Published 
 ---

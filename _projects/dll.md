@@ -1,13 +1,14 @@
 ---
 layout: page
 title: DLL
-description: A generic double-linked list implementation for C 
-img: assets/img/DLL.png
+description: 2021 - ongoing
+img: assets/img/DLL.jpg
 importance: 1
 category: Tools 
 ---
 
-## Description 
+## DLL: A Generic double-linked-list in C
+---
 
 Do you wish you had generic double-linked-lists in C?
 

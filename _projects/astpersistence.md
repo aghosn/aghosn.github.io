@@ -2,7 +2,7 @@
 layout: page
 title: ASTPersistence
 description: 2014 (Master semester project, EPFL) 
-img: assets/img/scalameta.png
+img: assets/img/scalameta.jpg
 importance: 3
 category: Masters 
 ---
