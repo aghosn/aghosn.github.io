@@ -2,7 +2,7 @@
 layout: page
 title: Tyche
 description: 2021 (PhD)
-img: assets/img/tyche.png
+img: assets/img/tyche.jpg
 importance: 8
 category: Published 
 ---

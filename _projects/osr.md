@@ -12,7 +12,7 @@ category: Masters
 
 I did my Master Thesis at Northeastern, with Prof. Jan Vitek, as part of my degree at EPFL.
 
-I worked on speculative optimizations and On-stack-replacement (OSR) for an R JIT compiler, using LLVM.
+I worked on speculative optimizations and On-Stack-Replacement (OSR) for an R JIT compiler, using LLVM.
 
 ## Abstract
 

@@ -37,6 +37,6 @@ I modified and extended the Go compiler as well as Python's runtime to support t
 
 <h5>Hobbies</h5>
 
-I spend time on `hackthebox` and am slowly improving my hacking skills.
+I spend time on `hackthebox` to slowly improve my hacking skills.
 
 Sports-wise, I like olympic weightlifting, crossfit, and MMA.
