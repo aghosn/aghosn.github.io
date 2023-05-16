@@ -18,7 +18,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hi,
 
-I'm Adrien, a Post Doc researcher at Microsoft Cambridge.
+I'm Adrien, a Post Doc researcher at Microsoft Cambridge.  
 I speciliaze in Confidential Computing, Virtualization, and Systems in general.
 
 Currently, I'm working on a security monitor written in Rust to provide a unified isolation API on commodity hardware (without fancy hardware extensions).
@@ -34,6 +34,6 @@ I modified and extended the Go compiler as well as Python's runtime to support t
 
 <h5>Hobbies</h5>
 
-I spend time on `hackthebox` to slowly improve my hacking skills.
+I spend time on [hackthebox](https://app.hackthebox.com/home) to slowly improve my hacking skills.
 
 Sports-wise, I like olympic weightlifting, crossfit, and MMA.
