@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DBG VMs | Adrien  Ghosn</title>
+    <meta name="author" content="Adrien  Ghosn">
+    <meta name="description" content="2021">
+    <meta name="keywords" content="aghosn, research, computer-science, virtualization, security, academic-website,">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.3/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/projects/gdb/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="//"><span class="font-weight-bold">Adrien </span>Ghosn</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">About</a>
+              </li>
+              
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">Publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">Projects</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/repositories/">Repositories</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/cv/">Resume</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- page.html -->
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">DBG VMs</h1>
+            <p class="post-description">2021</p>
+          </header>
+
+          <article>
+            <p><img class="emoji" title=":warning:" alt=":warning:" src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png" height="20" width="20"> This document is outdated.
+Tyche is now loading Linux without a relocation thus allowing a simpler debugging model where all gdb commands work natively in the main gdb session attached to qemu.</p>
+
+<p>I wrote this document when we were still trying to boot Linux on top of our security monitor with a memory relocation.
+At that point, we didn’t have any print output from the VM, we were not yet handling I/O devices correctly, etc.</p>
+
+<p><strong>Disclaimer:</strong> This is just me playing around; the code is not usable and the goal of the project was mostly to have fun and experiment the various tools available, e.g., gdb extensions, qemu configurations, etc.</p>
+
+<h1 id="the-challenges-of-debugging-a-guest-vm">The Challenges of Debugging a Guest VM</h1>
+
+<p>Most (system) programmers heavily rely on debuggers to understand their program’s behaviour and fix bugs.
+A debugger allows to set breakpoints, print the machine’s state (e.g., registers), disassemble code, inspect the program’s memory, and many other useful things.
+Unfortunately, our favorite debugger, GDB, seems to get slightly confused when attaching to a qemu session running tyche running a guest VM (here Linux or a static C program).</p>
+
+<p>This article lists the problems we faced when trying to use GDB as is to debug Linux running on top of tyche and the solution we adopted to get back some of debugger’s functionalities, namely:</p>
+
+<ol>
+  <li>Nested-guest symbols.</li>
+  <li>Setting breakpoints on nested-guest functions using guest addresses/symbols.</li>
+  <li>Dumping arbitrary memory content using nested-guest addresses.</li>
+  <li>Post-crash inspection of memory content.</li>
+  <li>Dumping Linux’s kernel print buffer.</li>
+</ol>
+
+<p>We are, however, still missing a few valuable features:</p>
+<ol>
+  <li>Performing a backtrace.</li>
+  <li>Support for arbitrary memory relocations.</li>
+</ol>
+
+<h2 id="a-bit-of-terminology">A Bit of Terminology</h2>
+
+<p>Before diving into the instricacies of the debugger, it is important to agree on the meaning of specific terms used throughout this article.</p>
+
+<p>*gpa - gva ; hpa - hva *: guest physical address - guest virtual address; host physical address - host virtual address.</p>
+
+<p><em>QEMU</em>: QEMU is a machine &amp; userpace emulator and virtualizer capable of integrating with hypervisors.</p>
+
+<p><em>KVM</em>: Kernel-based Virtual Machine allows user space programs access to hardware virtualization features.</p>
+
+<p>When working with nested-virtualization, it can be hard to understand what terms such as <code class="language-plaintext highlighter-rouge">guest</code> and <code class="language-plaintext highlighter-rouge">host</code> refer to, as they are highly context-dependent.
+Generally speaking, the <code class="language-plaintext highlighter-rouge">host</code> is responsible for providing a virtual environment in which the <code class="language-plaintext highlighter-rouge">guest</code> executes.</p>
+
+<p>This article describes issues we faced while in active development.
+Thus, in this context, the <code class="language-plaintext highlighter-rouge">host</code> is the OS running QEMU, the <code class="language-plaintext highlighter-rouge">guest</code> is Tyche, and the <code class="language-plaintext highlighter-rouge">nested-guest</code> is the Linux instance loaded by Tyche.</p>
+
+<p><img src="https://aghosn.github.io/assets/img/dev_setup.jpg" alt="dev setup"></p>
+
+<h2 id="to-debug-with-qemu">To Debug with QEMU</h2>
+
+<p>QEMU has support for gdb’s remote-connections and allows to debug <code class="language-plaintext highlighter-rouge">guests</code> (here, tyche).
+Most functionalities are available and it only requires a few <a href="https://qemu-project.gitlab.io/qemu/system/gdb.html" rel="external nofollow noopener" target="_blank">extra steps</a> compared to a regular gdb debugging sessions.
+QEMU even supports switching back and forth between virtual and physical guests addresses.
+With this simple setup, we are able to debug tyche code.</p>
+
+<p><img src="https://aghosn.github.io/assets/img/debugger.jpg" alt="debugger"></p>
+
+<p>Unfortunatly, things get a little more complicated once tyche starts running nested virtual. 
+GDB is unable to understand the virtual memory mappings set via EPTs and therefore rejects any memory dump (see image below).</p>
+
+<h2 id="getting-back-debugging-features">Getting Back Debugging Features</h2>
+
+<h3 id="symbols">Symbols</h3>
+
+<p>Tyche embbeds, at compile, the bytes of the nested-guest’s ELF file.
+As a result, only the tyche symbols are available in the debugging environment.</p>
+
+<p>A simple fix consists in loading the nested-guest source file along side tyche’s debug information.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add-symbol-file nest-guest-elf
+</code></pre></div></div>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<p>Software breakpoints are incompatible with nested-guests.
+They usually overwrite a virtual address with a special instruction that triggers an interrupt caught by the debugger.
+In our case, GDB considers any virtual address to be invalid and thus cannot set the breakpoint properly.</p>
+
+<p>Hardware breakpoints, i.e., <code class="language-plaintext highlighter-rouge">hb</code>, leverage hardware support and seem to work just fine even when the nested-guest executes.
+Note that there is a limited number of available breakpoints.</p>
+
+<p>For convenience (and to avoid mistakenly setting a software breakpoint) we alias <code class="language-plaintext highlighter-rouge">b</code> to <code class="language-plaintext highlighter-rouge">hb</code>.
+GDB does not allow direct aliasing of basic commands, but allows name shadows with functions:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>define b:
+	hb $arg0
+end
+</code></pre></div></div>
+
+<p>With this and the symbols available, we get our breakpoints back, even within the nested-guest functions.</p>
+
+<h3 id="dumping-memory-content">Dumping Memory Content</h3>
+
+<p>This is the trickiest part.
+GDB does not understand the virtual memory layout once within the guest and errors on any attempt to dump memory.
+Switching to physical addresses is annoying as we would need to do the address translation by hand.
+Even worse, while within the nested-guest, tyche’s symbols no longer correspond to valid addresses and therefore cannot be printed either.</p>
+
+<p>Our solution is a (hacky) simple one that relies on QEMU’s ability to map a guest’s memory to a file on the local disk.
+We then leverage this and a bit of python scripting to create a remote debug server capable of dumping memory content.</p>
+
+<h4 id="file-backed-guest-memory">File-backed Guest Memory</h4>
+
+<p>QEMU allows the creation of memory-backend-files that contain the guest’s memory.
+To create a guest with <code class="language-plaintext highlighter-rouge">6G</code> of memory whose default RAM is back by the file <code class="language-plaintext highlighter-rouge">/tmp/tyche</code>, we simply need the following arguments when invoking QEMU:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Give 6G of RAM to the guest
+-m 6G 
+-object memory-backend-file,id=pc.ram,share=on,mem-path=/tmp/tyche,size=6G
+-machine memory-backend=pc.ram
+</code></pre></div></div>
+
+<p>It is important that both the sizes and id match.
+Furthermore, in our example, we decided to file-back the default RAM.
+QEMU allows you to create extra memory regions with their own identifiers, that can be splitted into separate files.</p>
+
+<p>We now have the full (live) content of our guest’s memory, but it’s still just a bunch of bytes.
+How do we distinguish between functions and variables, or associate file offsets with symbols?</p>
+
+<h4 id="mapping-symbols-to-bytes">Mapping Symbols to Bytes</h4>
+
+<p>What can we do with just a bunch of bytes? 
+Dumping them directly with <code class="language-plaintext highlighter-rouge">hexdump</code> is pretty useless.</p>
+
+<p>Assume we are in a GDB session attached to tyche and have a nested-guest physical address we would like to dump.
+We know that <code class="language-plaintext highlighter-rouge">gpa + guest_offset = hpa</code> and the guest offset is known to tyche.
+Furthermore, the <code class="language-plaintext highlighter-rouge">hpa</code> is also the <code class="language-plaintext highlighter-rouge">/tmp/tych</code> byte offset.
+As a first, we can dump a particular address (or an array of bytes) by scripting a small GDB command that given an <code class="language-plaintext highlighter-rouge">hpa</code>, calls <code class="language-plaintext highlighter-rouge">xdd</code> with <code class="language-plaintext highlighter-rouge">--seek </code> and <code class="language-plaintext highlighter-rouge">-l </code> and dumps the corresponding content from the file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class TycheGuestMemoryDump (gdb.Command):
+    def __init__(self):
+        super (TycheGuestMemoryDump, self).__init__("tmd", gdb.COMMAND_USER)
+
+    def invoke(self, arg, from_tty):
+        args = arg.split(" ")
+        if len(args) != 2:
+            print("Error: expected 2 args, received ", len(args))
+            return
+        (offset, size) = args
+
+        import os
+        # Convert the size into an int.
+        b_size = 0
+        try:
+            b_size = int(size)
+        except ValueError:
+            print("Error: 'size' is not an int ", size)
+            return
+        start = str(int(offset, 16))
+        command = [
+                "xxd",
+                "-seek",
+                start,
+                "-l",
+                str(b_size),
+                "/tmp/tych",
+                ]
+        os.system(" ".join(command))
+</code></pre></div></div>
+
+<p>While this works, it’s a little crude.
+It still requires us to have the <code class="language-plaintext highlighter-rouge">hpa</code>, while most of the time we only have access to a <code class="language-plaintext highlighter-rouge">gpa</code> or <code class="language-plaintext highlighter-rouge">gva</code> while debugging the nested-guest.
+Can we do better? Yes!</p>
+
+<p>Let’s create a simple C program that mmaps the memory file and then executes an infinite loop.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;errno.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sys/mman.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;unistd.h&gt;
+
+void * dbg_offset = 0;
+
+void gdb_block() {
+  for (;;) {}
+}
+
+int main(void) {
+  const char * filepath = "/tmp/tyche";
+  int fd = open(filepath, O_RDONLY);
+  if (fd &lt; 0) {
+    printf("Could not open %s\n", filepath);
+    exit(1);
+  }
+  struct stat statbuf;
+  int err = fstat(fd, &amp;statbuf);
+  if (err &lt; 0) {
+    printf("Unable to fstat the file %s\n", filepath);
+    exit(2);
+  }
+  char *ptr = mmap(NULL, statbuf.st_size, PROT_READ, MAP_SHARED, fd, 0);
+  if (ptr == MAP_FAILED) {
+    printf("Mapping Failed %d\n", errno);
+    exit(3);
+  }
+  close(fd);
+	gdb_block();
+  return 0;
+}
+</code></pre></div></div>
+
+<p>Once compiled, we can run this program with gdb and set a breakpoint on <code class="language-plaintext highlighter-rouge">gdb_block</code>.
+We then have a gdb session with tyche’s memory mmaped at <code class="language-plaintext highlighter-rouge">dbg_offset</code>.</p>
+
+<p>How is that better than simply reading the file? 
+Well, here we can load the nested-guest’s symbols!
+All we need is to know the value of <code class="language-plaintext highlighter-rouge">guest_offset</code>.
+Assuming for a second that we have this offset, and that the nested-guest is identity mapped, all we need to do in this gdb session is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add-symbole-file  -o 
+</code></pre></div></div>
+
+<p>And we get back the symbols and memory dumps!
+Well, almost. This whole process is cumbersome as it requires a second terminal running a separate gdb instance.
+But now that we have the basic principle in mind, we can automate everything with a bunch of gdb scripts and python.</p>
+
+<h4 id="automation">Automation</h4>
+
+<p>We create gdb scripts that automatically set a breakpoint within tyche right after the guest is loaded and capture into convenience variables, for the current nested-guest, its <code class="language-plaintext highlighter-rouge">guest_offset</code> stored in a global variable.
+This is important as tyche’s globals will not be accessible once we are in the nested-guest.
+Second, the script spawns a detached process that starts a gdb session executing our C program above.
+This second session is scripted to block on <code class="language-plaintext highlighter-rouge">dbg_block</code>, receive the <code class="language-plaintext highlighter-rouge">guest_file</code> and <code class="language-plaintext highlighter-rouge">guest_offset</code> as arguments, load the guest symbols, and start a python server waiting for commands.</p>
+
+<p>Back in the QEMU gdb session, we create a python command called <code class="language-plaintext highlighter-rouge">tyche</code> that forwards whatever we type to the second gdb session.
+Furthermore, for convenience, we associate a context with each command to interpret any address surrounded by <code class="language-plaintext highlighter-rouge">@</code> symbols as either <code class="language-plaintext highlighter-rouge">gpa</code>, <code class="language-plaintext highlighter-rouge">hpa</code>, <code class="language-plaintext highlighter-rouge">gva</code>, or <code class="language-plaintext highlighter-rouge">hva</code>.
+The python gdb command will attempt to translate any address into an <code class="language-plaintext highlighter-rouge">hpa</code> locally.
+This is possible with <code class="language-plaintext highlighter-rouge">rawc</code> as it is identity mapped, while for linux we need to remove the kernel mask.
+Note that this does not work with relocations or stacks.</p>
+
+<p>The C program gdb session then receives the command, translates addresses surrounded by <code class="language-plaintext highlighter-rouge">@</code> by adding <code class="language-plaintext highlighter-rouge">dbg_offset</code> to them, executes, and returns the result of the command via the same socket.</p>
+
+<p><img src="https://aghosn.github.io/assets/img/debugging_session.jpg" alt="debugging_session"></p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>There we go! We got back memory dump and it works with symbols too!
+We can even do post-mortem debugging as the <code class="language-plaintext highlighter-rouge">/tmp/tyche</code> file is persisted on disk.</p>
+
+<h3 id="dumping-the-linux-printk-buffer">Dumping the Linux printk Buffer</h3>
+
+<p>Now how do we print the Linux <code class="language-plaintext highlighter-rouge">printk</code> buffer?
+Easy, we ask the remote session to print the <code class="language-plaintext highlighter-rouge">__log_buf</code> buffer.
+This requires capturing its address in a convenience var and then sending the command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x/10s @@
+
+</code></pre></div></div>
+
+<p>to print the first 10 lines.</p>
+
+<p>Once again, we automate all of these using convenience vars and by defining a special command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tyche PLOG 
+</code></pre></div></div>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>While we support enough for our current debugging needs, there are still a few features that do not work.</p>
+
+<h3 id="backtrace">Backtrace</h3>
+
+<p>Being able to perform a backstrace or a stack dump in the nested-guest would be amazing.
+Unfortunately we do not have a way to support arbitrary <code class="language-plaintext highlighter-rouge">gva -&gt; gpa</code> mappings (or <code class="language-plaintext highlighter-rouge">gpa-&gt;hpa</code> for that matter).</p>
+
+<h3 id="relocations">Relocations</h3>
+
+<p>A generalization of the backtrace problem is the support for arbitrary relocations/mappings at both page table levels.</p>
+
+<p>A possible solution would be to point the remote gdb session to the root EPTs and PTs.
+A python program could then walk the pages to compute a <code class="language-plaintext highlighter-rouge">gva -&gt; gpa -&gt; hpa</code> address. 
+But that’s work for later!</p>
+
+<h2 id="conclusion-1">Conclusion</h2>
+
+<p>In this article we presented our hacky way to get back some of the functionalities we lose when debugging a nested-guest inside a QEMU gdb session.
+There must be a better way of doing this, that better integrates with QEMU.
+Unfortunately, we did not find it.
+It just seemed easier (and funnier) to just put together a few scripts and implement our own debugging pipeline.</p>
+
+
+          </article>
+
+        </div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Adrien  Ghosn. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.3/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
