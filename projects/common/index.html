@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ELF64 | Adrien  Ghosn</title>
+    <title>Common | Adrien  Ghosn</title>
     <meta name="author" content="Adrien  Ghosn">
     <meta name="description" content="2021 - ongoing, C-Stem">
     <meta name="keywords" content="aghosn, research, computer-science, virtualization, security, academic-website,">
@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://aghosn.github.io/projects/elf64/">
+    <link rel="canonical" href="https://aghosn.github.io/projects/common/">
 
     <!-- Dark Mode -->
     
@@ -119,25 +119,23 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">ELF64</h1>
+            <h1 class="post-title">Common</h1>
             <p class="post-description">2021 - ongoing, C-Stem</p>
           </header>
 
           <article>
-            <h2 id="elf-64-parser-in-c">ELF 64 parser in C</h2>
-
+            <h2 id="common-logging-and-return-values">Common: Logging and return values</h2>
 <hr>
 
-<p>Writing code to parse an ELF binary seems to be something that I have to do at least once every two years.
-As part of my <code class="language-plaintext highlighter-rouge">C-Stem</code> initiative, I decided to package my C implementation into a library.</p>
+<p>When you work at several layers of the stack, e.g., user code and driver code, and on top of that might share libraries between the two, it is useful to have a single logging library that works in both environments.</p>
 
-<p>The library supports symbol lookups (but does not parse relocations… yet).</p>
+<p>The <code class="language-plaintext highlighter-rouge">common</code> library is a very simple logging code written in C macros that can be used in both modes and defines universal <code class="language-plaintext highlighter-rouge">SUCCESS</code> and <code class="language-plaintext highlighter-rouge">FAILURE</code> values.</p>
 
-<p>I might be able to get my hands on my Go and Rust implementations and publish them here as well.</p>
+<p>My plan is to add logging levels at some point and improve support for asserts.</p>
 
 <h2 id="code">Code</h2>
 
-<p><a href="https://github.com/aghosn/c-stem/tree/main/elf64" rel="external nofollow noopener" target="_blank">Github repository</a></p>
+<p><a href="https://github.com/aghosn/c-stem/tree/main/common" rel="external nofollow noopener" target="_blank">Github Repository</a></p>
 
           </article>
 
