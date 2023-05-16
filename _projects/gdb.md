@@ -244,7 +244,7 @@ Note that this does not work with relocations or stacks.
 
 The C program gdb session then receives the command, translates addresses surrounded by `@` by adding `dbg_offset` to them, executes, and returns the result of the command via the same socket.
 
-![debugging_session](https://aghosn.github.io/CharlyCst/assets/img/debugging_session.jpg)
+![debugging_session](https://aghosn.github.io/assets/img/debugging_session.jpg)
 
 #### Conclusion
 
