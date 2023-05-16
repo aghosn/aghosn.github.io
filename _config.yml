@@ -165,25 +165,25 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Collections
 # -----------------------------------------------------------------------------
 
-collections:
-  news:
-    defaults:
-      layout: post
-    output: false 
-    permalink: /news/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
-
-announcements:
-  enabled: false 
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: false 
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+#collections:
+#  news:
+#    defaults:
+#      layout: post
+#    output: false 
+#    permalink: /news/:path/
+#  projects:
+#    output: true
+#    permalink: /projects/:path/
+#
+#announcements:
+#  enabled: false 
+#  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+#  limit: 5 # leave blank to include all the news in the `_news` folder
+#
+#latest_posts:
+#  enabled: false 
+#  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+#  limit: 3 # leave blank to include all the blog posts
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -270,8 +270,8 @@ display_tags: [] # this tags will be dispalyed on the front page of your blog
 
 scholar:
 
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Ghosn]
+  first_name: [Adrien]
 
   style: apa
   locale: en
