@@ -38,11 +38,11 @@ We are, however, still missing a few valuable features:
 
 Before diving into the instricacies of the debugger, it is important to agree on the meaning of specific terms used throughout this article.
 
-*gpa - gva ; hpa - hva *: guest physical address - guest virtual address; host physical address - host virtual address.
+**gpa - gva ; hpa - hva:** guest physical address - guest virtual address; host physical address - host virtual address.
 
-*QEMU*: QEMU is a machine & userpace emulator and virtualizer capable of integrating with hypervisors.
+**QEMU**: QEMU is a machine & userpace emulator and virtualizer capable of integrating with hypervisors.
 
-*KVM*: Kernel-based Virtual Machine allows user space programs access to hardware virtualization features.
+**KVM**: Kernel-based Virtual Machine allows user space programs access to hardware virtualization features.
 
 When working with nested-virtualization, it can be hard to understand what terms such as `guest` and `host` refer to, as they are highly context-dependent.
 Generally speaking, the `host` is responsible for providing a virtual environment in which the `guest` executes.
@@ -54,15 +54,15 @@ Thus, in this context, the `host` is the OS running QEMU, the `guest` is Tyche, 
 
 ## To Debug with QEMU
 
-QEMU has support for gdb's remote-connections and allows to debug `guests` (here, tyche).
-Most functionalities are available and it only requires a few [extra steps](https://qemu-project.gitlab.io/qemu/system/gdb.html) compared to a regular gdb debugging sessions.
+QEMU supports gdb remote-connections and allows to debug `guests` (here, tyche).
+Most functionalities are available and it only requires a few [extra steps](https://qemu-project.gitlab.io/qemu/system/gdb.html) compared to a regular gdb debugging session.
 QEMU even supports switching back and forth between virtual and physical guests addresses.
 With this simple setup, we are able to debug tyche code.
 
 ![debugger](https://aghosn.github.io/assets/img/debugger.jpg)
 
-Unfortunatly, things get a little more complicated once tyche starts running nested virtual. 
-GDB is unable to understand the virtual memory mappings set via EPTs and therefore rejects any memory dump (see image below).
+Unfortunatly, things get a little more complicated once tyche starts running a nested virtual machine.   
+GDB is unable to understand the virtual memory mappings set via EPTs and therefore rejects any memory dump.
 
 ## Getting Back Debugging Features
 
@@ -74,7 +74,7 @@ As a result, only the tyche symbols are available in the debugging environment.
 A simple fix consists in loading the nested-guest source file along side tyche's debug information.
 
 ```
-add-symbol-file nest-guest-elf
+add-symbol-file nested-guest-elf
 ```
 
 ### Breakpoints
@@ -86,7 +86,7 @@ In our case, GDB considers any virtual address to be invalid and thus cannot set
 Hardware breakpoints, i.e., `hb`, leverage hardware support and seem to work just fine even when the nested-guest executes.
 Note that there is a limited number of available breakpoints.
 
-For convenience (and to avoid mistakenly setting a software breakpoint) we alias `b` to `hb`.
+For convenience (and to avoid mistakenly setting a software breakpoint) we alias `b` to `hb`.  
 GDB does not allow direct aliasing of basic commands, but allows name shadows with functions:
 
 ```
@@ -109,7 +109,7 @@ We then leverage this and a bit of python scripting to create a remote debug ser
 
 #### File-backed Guest Memory
 
-QEMU allows the creation of memory-backend-files that contain the guest's memory.
+QEMU allows the creation of memory-backed-files that contain the guest's memory.
 To create a guest with `6G` of memory whose default RAM is back by the file `/tmp/tyche`, we simply need the following arguments when invoking QEMU:
 
 ```
@@ -132,9 +132,9 @@ What can we do with just a bunch of bytes?
 Dumping them directly with `hexdump` is pretty useless.
 
 Assume we are in a GDB session attached to tyche and have a nested-guest physical address we would like to dump.
-We know that `gpa + guest_offset = hpa` and the guest offset is known to tyche.
-Furthermore, the `hpa` is also the `/tmp/tych` byte offset.
-As a first, we can dump a particular address (or an array of bytes) by scripting a small GDB command that given an `hpa`, calls `xdd` with `--seek {{hpa}}` and `-l {{size}}` and dumps the corresponding content from the file. 
+We know that `gpa = hpa + guest_offset` and the guest offset is known to tyche.
+Furthermore, the `hpa` is also the `/tmp/tyche` byte offset.
+As a first, we can dump a particular address (or an array of bytes) by scripting a small GDB command that given an `hpa`, calls `xdd` with `--seek {hpa}` and `-l {size}` and dumps the corresponding content from the file. 
 
 ```
 class TycheGuestMemoryDump (gdb.Command):
@@ -222,7 +222,7 @@ All we need is to know the value of `guest_offset`.
 Assuming for a second that we have this offset, and that the nested-guest is identity mapped, all we need to do in this gdb session is: 
 
 ```
-add-symbole-file {{guest_file, e.g., vmlinux}} -o {{guest_offset}}
+add-symbole-file {guest_file, e.g., vmlinux} -o {guest_offset}
 ```
 
 And we get back the symbols and memory dumps!
@@ -245,8 +245,7 @@ Note that this does not work with relocations or stacks.
 The C program gdb session then receives the command, translates addresses surrounded by `@` by adding `dbg_offset` to them, executes, and returns the result of the command via the same socket.
 
 ![debugging_session](https://aghosn.github.io/assets/img/debugging_session.jpg)
-
-#### Conclusion
+ 
 
 There we go! We got back memory dump and it works with symbols too!
 We can even do post-mortem debugging as the `/tmp/tyche` file is persisted on disk.
@@ -258,7 +257,7 @@ Easy, we ask the remote session to print the `__log_buf` buffer.
 This requires capturing its address in a convenience var and then sending the command: 
 
 ```
-x/10s @{{address}}@
+x/10s @{address}@
 
 ```
 
@@ -267,11 +266,8 @@ to print the first 10 lines.
 Once again, we automate all of these using convenience vars and by defining a special command:
 
 ```
-tyche PLOG {{number of lines}}
+tyche PLOG {number of lines}
 ```
-
-
-
 
 ## Limitations
 
