@@ -139,7 +139,7 @@ These languages would then be able to take advantage of hardware isolation mecha
 <p>The enclosure policies are enforced at run time by LitterBox, a language-independent framework that uses hardware mechanisms to provide uniform and robust isolation guarantees, even for libraries written in unsafe languages.
 LitterBox currently supports both Intel VT-x (with general-purpose extended page tables) and the emerging Intel Memory Protection Keys (MPK).</p>
 
-<p>We describe an enclosure implementation for the Go and Pythonlanguages.
+<p>We describe an enclosure implementation for the Go and Python languages.
 Our evaluation demonstrates that the Go implementation can protect sensitive data in real-world applications constructed using complex untrusted libraries with deep dependencies.
 It requires minimal code refactoring and incurs acceptable performance overhead.
 The Python implementation demonstrates LitterBox’s ability to support dynamic languages.</p>
