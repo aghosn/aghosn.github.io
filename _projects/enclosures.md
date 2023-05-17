@@ -34,3 +34,7 @@ The Python implementation demonstrates LitterBox’s ability to support dynamic 
 ## Artefacts
 
 <a href='https://github.com/aghosn/enclosures'>Code Snapshot</a>
+
+## Paper
+
+{% pdf "/assets/pdf/enclosure_aghosn.pdf" %}

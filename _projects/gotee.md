@@ -26,3 +26,7 @@ The evaluation shows that our compiler-driven code and data partitioning efficie
 <a href='https://www.youtube.com/watch?v=Gl7ml_xTk94'>Talk</a>
 
 <a href='https://github.com/epfl-dcsl/gotee'>Code Snapshot</a>
+
+## Paper
+
+{% pdf "/assets/pdf/gotee_aghosn.pdf" %}
