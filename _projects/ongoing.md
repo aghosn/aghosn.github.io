@@ -7,17 +7,30 @@ importance: 8
 category: Research 
 ---
 
-# TEEs on Legacy hardware
+# Tyche: Creating Trust by Abolishing Hierarchies
 
-Confidential Computing is getting traction and various solutions have appeared on different hardware platforms.
-While it is not clear yet what the right abstraction is, i.e., whether we should provide sub-process confidential compartments, like enclaves, or full confidential VMs, in the likes of AMD-SEV SNP or Intel TDX, this short talk presents our approach:
+## Description
 
-We take a step back and attempt to define exactly what it is we need to support confidential computing.
-Whether it really requires new hardware, or simply a system re-design.
+At the end of my PhD, I applied and received the Swiss JRC grant to work on confidential computing solutions for legacy hardware.
+The goal was to come up with a unified isolation mechanism for compartmentalization and confidential computing, without confidiential computing hardware extensions.
 
-My personal belief is that confidential computing should become the norm and thus be supported in a similar fashion on all platforms, all devices, and be orthogonal to existing system abstractions (process & VMs).
-The right solution should support enclaves, confidential VMs, but also any combination and nesting of both.
+This is an ongoing project with a first publication at HotOS 23.
 
-<a href='https://youtu.be/pXv3IU9DJAM?t=1153'>This</a> is the first short talk I gave, at AMLD EPFL, in that direction at the very early stages of our project called Tyche.
+## Abstract
 
-Since then, we have made progress toward a full implementation and published our early prototype at HotOS 23.
+Software is going through a trust crisis.
+Privileged code is no longer trusted and processes insufficiently protect user code from unverified libraries. While usually treated separately, confidential computing and program compartmentalization are both symptoms of the same problem, deeply rooted in hierarchical commodity systems: privileged software’s monopoly over isolation.
+
+This paper proposes a separation of powers: to decouple trust and isolation from privilege hierarchies.
+It introduces an isolation monitor, which delivers verifiable isolation, confidentiality, and integrity to all software, independent of existing system abstractions and privilege hierarchies.
+
+Tyche, our prototype isolation monitor, runs on commodity hardware without relying on complex and emerging hardware security extensions.
+It enables any software component to create, compose, and nest isolation abstractions, including user and kernel sandboxes, enclaves, as well as confidential virtual machines.
+
+## Paper
+
+{% pdf "/assets/pdf/tyche_aghosn.pdf" %}
+
+# Presentations
+
+<a href='https://youtu.be/pXv3IU9DJAM?t=1153'>Early stage presentation at AMLD EPFL</a>
