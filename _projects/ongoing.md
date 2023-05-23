@@ -31,6 +31,6 @@ It enables any software component to create, compose, and nest isolation abstrac
 
 {% pdf "/assets/pdf/tyche_aghosn.pdf" %}
 
-# Presentations
+## Presentations
 
 <a href='https://youtu.be/pXv3IU9DJAM?t=1153'>Early stage presentation at AMLD EPFL</a>

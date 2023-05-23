@@ -15,6 +15,11 @@ Another usage for this project was to integrate it directly in CI to update libr
 
 ## Abstract
 
+Obey is a user-friendly tool that helps programmers enforce code health requirements in their projects.
+Requirements are expressed as rules, written with the TQL library combinators used to traverse scala.meta trees, that generate compiler warnings and can automatically correct the source code.
+Programmers are provided with a set of basic rules and can easily implement and use their own. Obey can be used to systematically enforce user-defined requirements, to automate migration between different library versions or simply to format source code.
+In this paper, we will present the user interface, the implementation details and the results we obtained during this semester project.
+
 ## Artefact
 
 <a href='https://github.com/aghosn/Obey'>Github repository</a>
