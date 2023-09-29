@@ -231,6 +231,7 @@ plugins:
   - jekyll-twitter-plugin
   - jemoji
   - jekyll-pdf-embed
+  - jekyll-sitemap
 
 # Sitemap settings
 defaults:
