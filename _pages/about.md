@@ -18,7 +18,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hi,
 
-I'm Adrien, a Post Doc researcher at Microsoft Cambridge.  
+I'm Adrien, a Researcher at Microsoft Azure Research in Cambridge.  
 I speciliaze in Confidential Computing, Virtualization, and Systems in general.
 
 Currently, I'm working on a security monitor written in Rust to provide a unified isolation API on commodity hardware (without fancy hardware extensions).
