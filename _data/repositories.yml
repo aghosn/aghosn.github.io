@@ -2,6 +2,7 @@ github_users:
   - aghosn 
 
 github_repos:
+  - epfl-dcsl/tyche-devel
   - aghosn/c-stem
   - epfl-dcsl/gotee
   - aghosn/enclosures

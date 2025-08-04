@@ -124,7 +124,30 @@
           </header>
 
           <article>
-            <h1 id="tyche-creating-trust-by-abolishing-hierarchies">Tyche: Creating Trust by Abolishing Hierarchies</h1>
+            <h1 id="rethinking-the-confidential-cloud-through-a-unified-low-level-abstraction-for-composable-isolation">Rethinking the confidential cloud through a unified low-level abstraction for composable isolation</h1>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Securing sensitive cloud workloads requires composing confidential virtual machines (CVMs) with nested enclaves or sandboxes.
+Unfortunately, each new isolation boundary adds ad-hoc access control mechanisms, hardware extensions, and trusted software.
+This escalating complexity bloats the TCB, complicates end-to-end attestation, and leads to fragmentation across platforms and cloud service providers (CSP).</p>
+
+<p>We introduce a unified isolation model that delegates enforceable, composable, and attestable isolation to a single trusted security monitor: Tyche.
+Tyche provides an API for partitioning, sharing, attesting, and reclaiming resources through its core abstraction, trust domains (TDs).
+To provide fine-grain isolation, TDs can recursively create and manage sub-TDs.
+Tyche captures these relationships in attestations, allowing cloud tenants to reason about end-to-end security.
+TDs serve as the building blocks for constructing composable enclaves, sandboxes, and CVMs.</p>
+
+<p>Tyche runs on commodity x86_64 without hardware security extensions and can maintain backward compatibility with existing software. We provide an SDK to run and compose unmodified workloads as sandboxes, enclaves, and CVMs with minimal overhead compared to native Linux execution. Tyche supports complex cloud scenarios, such a confidential inference with mutually distrustful users, model owners, and CSP. An additional RISC-V prototype demonstrates Tyche’s portability across platforms.</p>
+
+<h2 id="paper">Paper</h2>
+
+<style> .pdf-embed-wrap-e2a5d3bc-ade7-44f4-ae19-f957e92febef { display: flex; flex-direction: column; width: 100%; height: 650px; } .pdf-embed-container-e2a5d3bc-ade7-44f4-ae19-f957e92febef { height: 100%; } .pdf-link-e2a5d3bc-ade7-44f4-ae19-f957e92febef { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container-e2a5d3bc-ade7-44f4-ae19-f957e92febef iframe { width: 100%; height: 100%; } </style>
+<div class="pdf-embed-wrap-e2a5d3bc-ade7-44f4-ae19-f957e92febef"> <div class="pdf-link-e2a5d3bc-ade7-44f4-ae19-f957e92febef"> <a href="/assets/pdf/rethinking.pdf" target="_blank">View PDF</a> </div> <div class="pdf-embed-container-e2a5d3bc-ade7-44f4-ae19-f957e92febef"> <iframe src="/assets/pdf/rethinking.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
+
+<hr>
+
+<h1 id="tyche-creating-trust-by-abolishing-hierarchies">Tyche: Creating Trust by Abolishing Hierarchies</h1>
 
 <h2 id="description">Description</h2>
 
@@ -133,7 +156,7 @@ The goal was to come up with a unified isolation mechanism for compartmentalizat
 
 <p>This is an ongoing project with a first publication at HotOS 23.</p>
 
-<h2 id="abstract">Abstract</h2>
+<h2 id="abstract-1">Abstract</h2>
 
 <p>Software is going through a trust crisis.
 Privileged code is no longer trusted and processes insufficiently protect user code from unverified libraries. While usually treated separately, confidential computing and program compartmentalization are both symptoms of the same problem, deeply rooted in hierarchical commodity systems: privileged software’s monopoly over isolation.</p>
@@ -144,10 +167,10 @@ It introduces an isolation monitor, which delivers verifiable isolation, confide
 <p>Tyche, our prototype isolation monitor, runs on commodity hardware without relying on complex and emerging hardware security extensions.
 It enables any software component to create, compose, and nest isolation abstractions, including user and kernel sandboxes, enclaves, as well as confidential virtual machines.</p>
 
-<h2 id="paper">Paper</h2>
+<h2 id="paper-1">Paper</h2>
 
-<style> .pdf-embed-wrap-976b3adb-ff2d-45ad-9c5b-7a5497881374 { display: flex; flex-direction: column; width: 100%; height: 650px; } .pdf-embed-container-976b3adb-ff2d-45ad-9c5b-7a5497881374 { height: 100%; } .pdf-link-976b3adb-ff2d-45ad-9c5b-7a5497881374 { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container-976b3adb-ff2d-45ad-9c5b-7a5497881374 iframe { width: 100%; height: 100%; } </style>
-<div class="pdf-embed-wrap-976b3adb-ff2d-45ad-9c5b-7a5497881374"> <div class="pdf-link-976b3adb-ff2d-45ad-9c5b-7a5497881374"> <a href="/assets/pdf/tyche_aghosn.pdf" target="_blank">View PDF</a> </div> <div class="pdf-embed-container-976b3adb-ff2d-45ad-9c5b-7a5497881374"> <iframe src="/assets/pdf/tyche_aghosn.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
+<style> .pdf-embed-wrap-2c74b132-3a8f-408f-9547-ad23c7ca35fe { display: flex; flex-direction: column; width: 100%; height: 650px; } .pdf-embed-container-2c74b132-3a8f-408f-9547-ad23c7ca35fe { height: 100%; } .pdf-link-2c74b132-3a8f-408f-9547-ad23c7ca35fe { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container-2c74b132-3a8f-408f-9547-ad23c7ca35fe iframe { width: 100%; height: 100%; } </style>
+<div class="pdf-embed-wrap-2c74b132-3a8f-408f-9547-ad23c7ca35fe"> <div class="pdf-link-2c74b132-3a8f-408f-9547-ad23c7ca35fe"> <a href="/assets/pdf/tyche_aghosn.pdf" target="_blank">View PDF</a> </div> <div class="pdf-embed-container-2c74b132-3a8f-408f-9547-ad23c7ca35fe"> <iframe src="/assets/pdf/tyche_aghosn.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
 
 <h2 id="presentations">Presentations</h2>
 
