@@ -1,0 +1,22 @@
+---
+layout: redirect.njk
+pagination:
+  data: redirects
+  size: 1
+  alias: redirect
+permalink: "{{ redirect.from }}index.html"
+eleventyComputed:
+  redirectTo: "{{ redirect.to }}"
+eleventyExcludeFromCollections: true
+redirects:
+  - from: /cv/
+    to: /#cv
+  - from: /publications/
+    to: /#publications
+  - from: /projects/tyche/
+    to: /research/tyche/
+  - from: /projects/enclosures/
+    to: /#publications
+  - from: /projects/gotee/
+    to: /#publications
+---

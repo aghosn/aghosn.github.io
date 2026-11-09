@@ -1,0 +1,64 @@
+---
+layout: base.njk
+revealEmail: true
+---
+<div class="page-shell">
+  <section id="home" class="hero" aria-labelledby="home-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Systems &amp; security research</p>
+      <h1 id="home-title">Adrien Ghosn<span class="wordmark-dot">.</span></h1>
+      <p class="hero-intro">Building secure systems<br>from the right primitives.</p>
+      {% for section in collections.sections %}
+        {% if section.data.sectionId == "home" %}{{ section.content | safe }}{% endif %}
+      {% endfor %}
+      <div class="hero-links">
+        <a class="button" href="#publications">Explore my research <span aria-hidden="true">&darr;</span></a>
+        <a href="https://www.linkedin.com/in/aghosn/" data-email-reveal>Get in touch <span aria-hidden="true">&nearr;</span></a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="/images/portrait.jpg" alt="Portrait of Adrien Ghosn" width="420" height="500" fetchpriority="high">
+      <figcaption>Confidential computing / Virtualization / Systems</figcaption>
+    </figure>
+  </section>
+
+  <section id="publications" class="section" aria-labelledby="publications-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">01 / Research</p><h2 id="publications-title">Publications</h2></div>
+      <a class="quiet-link" href="/bib.tex" download>Download bibliography &darr;</a>
+    </div>
+    {% for group in publications %}
+      <div class="publication-year">
+        <h3>{{ group.year }}</h3>
+        <div class="paper-list">
+          {% for paper in group.papers %}
+            <article class="paper">
+              <span class="venue">{{ paper.venue }}</span>
+              <h4><a href="{{ paper.url }}">{{ paper.title }}</a></h4>
+              <p class="authors">{{ paper.authors }}</p>
+              <div class="paper-links">
+                <a href="{{ paper.url }}">{% if paper.artifact %}Artifact{% else %}Publication{% endif %} &nearr;</a>
+                {% if paper.pdf %}<a href="{{ paper.pdf }}">PDF &darr;</a>{% elif not paper.artifact %}<span class="missing-pdf">PDF to add</span>{% endif %}
+                {% if paper.slides %}<a href="{{ paper.slides }}">Slides &darr;</a>{% endif %}
+                {% if paper.project %}<a href="{{ paper.project }}">Project &rarr;</a>{% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+    <p class="bibliography-source">Publication metadata from <a href="https://dblp.org/pid/244/9344.html">DBLP</a>. Preprints and software artifacts are labeled separately; edited proceedings are listed under community service.</p>
+  </section>
+
+  {% for section in collections.sections %}
+    {% if section.data.sectionId != "home" %}
+      <section id="{{ section.data.sectionId }}" class="section" aria-labelledby="{{ section.data.sectionId }}-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">{{ section.data.eyebrow }}</p><h2 id="{{ section.data.sectionId }}-title">{{ section.data.title }}</h2></div>
+          {% if section.data.sectionId == "cv" %}<a class="button" href="/cv/aghosn_cv.pdf" download>Download CV <span aria-hidden="true">&darr;</span></a>{% endif %}
+        </div>
+        <div class="markdown-content">{{ section.content | safe }}</div>
+      </section>
+    {% endif %}
+  {% endfor %}
+</div>

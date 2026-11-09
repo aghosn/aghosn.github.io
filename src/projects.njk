@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Projects
+navSection: projects
+description: Research projects by Adrien Ghosn, including Tyche and composable isolation.
+permalink: /projects/
+---
+<div class="project-page">
+  <p class="eyebrow">Research / In depth</p>
+  <h1>Projects</h1>
+  <p>A closer look at the systems and ideas behind my research.</p>
+  <div class="project-list">
+    {% for project in collections.project %}
+      <article class="project-card">
+        <h2><a href="{{ project.url }}">{{ project.data.title }} &rarr;</a></h2>
+        <p>{{ project.data.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
+  <p><a href="/#publications">Browse all publications &rarr;</a></p>
+</div>

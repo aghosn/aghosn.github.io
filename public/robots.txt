@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aghosn.github.io/sitemap.xml

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ description or site.description }}">
+    <title>{% if title %}{{ title }} | {% endif %}Adrien Ghosn</title>
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="stylesheet" href="/style.css">
+    {% if revealEmail %}<script src="/contact.js" defer></script>{% endif %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="navigation" aria-label="Main navigation">
+        <a class="wordmark" href="/#home">Adrien Ghosn<span class="wordmark-dot">.</span></a>
+        <div class="nav-links">
+          <a href="/#home">About</a>
+          <a href="/#publications">Publications</a>
+          <a href="/projects/"{% if navSection == "projects" %} aria-current="page"{% endif %}>Projects</a>
+          <a href="/#cv">CV</a>
+          <a href="/#service">Community</a>
+        </div>
+        <div class="header-profiles">
+          <a href="https://github.com/aghosn" aria-label="GitHub profile" title="GitHub">
+            <img src="/icons/github.svg" width="18" height="18" alt="">
+          </a>
+          <a href="https://www.linkedin.com/in/aghosn/" aria-label="LinkedIn profile" title="LinkedIn">
+            <img src="/icons/linkedin.svg" width="18" height="18" alt="">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">{{ content | safe }}</main>
+    <footer class="site-footer">
+      <span>Adrien Ghosn</span>
+      <span>Systems. Trust. Abstractions.</span>
+      <a href="/#home">Back to top &uarr;</a>
+    </footer>
+  </body>
+</html>
