@@ -78,8 +78,8 @@ The previous Jekyll theme, Ruby/Docker setup, old projects, and checked-in
 Keep the front matter at the top of each Markdown file. The section's
 `sectionId` supplies its anchor; `order` controls the order of the Markdown
 sections. Publications are rendered between the biography and CV.
-The CV PDF is still the June 2023 version and is explicitly dated on the site.
-Replace it at the same path when an updated CV is available, then update the
+The View CV and Download CV buttons use the same PDF. Replace it at
+`public/cv/aghosn_cv.pdf` when an updated CV is available, then update the
 date note in `src/content/cv.md`.
 
 To add another home-page section, create a Markdown file in `src/content/`

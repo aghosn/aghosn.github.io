@@ -55,7 +55,12 @@ revealEmail: true
       <section id="{{ section.data.sectionId }}" class="section" aria-labelledby="{{ section.data.sectionId }}-title">
         <div class="section-heading">
           <div><p class="eyebrow">{{ section.data.eyebrow }}</p><h2 id="{{ section.data.sectionId }}-title">{{ section.data.title }}</h2></div>
-          {% if section.data.sectionId == "cv" %}<a class="button" href="/cv/aghosn_cv.pdf" download>Download CV <span aria-hidden="true">&darr;</span></a>{% endif %}
+          {% if section.data.sectionId == "cv" %}
+            <div class="cv-actions">
+              <a class="button button-secondary" href="/cv/aghosn_cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="View CV (PDF, opens in a new tab)">View CV <span aria-hidden="true">&nearr;</span></a>
+              <a class="button" href="/cv/aghosn_cv.pdf" download>Download CV <span aria-hidden="true">&darr;</span></a>
+            </div>
+          {% endif %}
         </div>
         <div class="markdown-content">{{ section.content | safe }}</div>
       </section>

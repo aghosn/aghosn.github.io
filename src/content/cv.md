@@ -59,4 +59,4 @@ Semester-project supervision on a Go Intel MPK library and system-call interposi
 
 Teaching assistant at EPFL, 2015-2020: Concurrent Programming, Introduction to C and Java Programming, Systems for Data Science, Introduction to Operating Systems, and Functional Programming.
 
-The downloadable PDF is the existing June 2023 CV; the online summary includes the updated title from my institutional profile.
+The PDF was updated in November 2026.
