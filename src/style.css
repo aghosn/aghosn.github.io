@@ -89,6 +89,18 @@ h2 { font-size: 34px; font-weight: 600; line-height: 1.2; margin-bottom: 0; lett
 .project-page h3 { margin-top: 30px; }
 .project-page .eyebrow { margin-top: 40px; }
 .project-page hr { border: 0; border-top: 1px solid var(--line); margin-block: 40px; }
+.slide-deck { margin-block: 32px; padding: 24px; background: white; border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 16px; }
+.slide-deck-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.slide-deck-heading h3 { margin: 0; color: var(--accent); }
+.slide-deck-heading p { margin: 4px 0 0; font-size: 12px; color: var(--muted); }
+.slide-deck-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.slide-deck-viewer { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 6px; }
+.slide-carousel:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 6px; }
+.slide-carousel-controls:not([hidden]) { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 16px; }
+.slide-arrow { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); color: var(--accent); font: inherit; font-size: 22px; cursor: pointer; }
+.slide-arrow:hover { background: var(--accent); color: white; }
+.slide-counter { min-width: 90px; text-align: center; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.slide-deck-help { margin: 12px 0 0; font-size: 12px; color: var(--muted); }
 .project-list { margin-block: 36px; }
 .project-card { padding-block: 28px; border-block: 1px solid var(--line); }
 .project-card h2 { margin-bottom: 12px; }
@@ -97,6 +109,7 @@ h2 { font-size: 34px; font-weight: 600; line-height: 1.2; margin-bottom: 0; lett
 .project-card p { color: var(--muted); margin-bottom: 0; }
 
 @media (max-width: 760px) {
+  .slide-deck { padding: 16px; }
   .navigation, .page-shell, .site-footer { padding-inline: 22px; }
   .navigation { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; padding-block: 14px; }
   .wordmark { grid-column: 1; grid-row: 1; }
